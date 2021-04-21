@@ -9,13 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- New tomate API
+- New focusyn API
 
 ## 0.8.0
 
 ### Changed
 
-- New tomate API
+- New focusyn API
 
 ## 0.7.0
 

@@ -11,8 +11,8 @@ gi.require_version("Gtk", "3.0")
 from wiring import Graph
 from gi.repository import Gst, Gtk
 
-import tomate.pomodoro.plugin as plugin
-from tomate.pomodoro import Bus, Config, Events, on, suppress_errors
+import focusyn.pomodoro.plugin as plugin
+from focusyn.pomodoro import Bus, Config, Events, on, suppress_errors
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +31,7 @@ class AlarmPlugin(plugin.Plugin):
 
     def configure(self, bus: Bus, graph: Graph) -> None:
         super().configure(bus, graph)
-        self.config = graph.get("tomate.config")
+        self.config = graph.get("focusyn.config")
 
     def create_player(self):
         Gst.init(None)
@@ -63,7 +63,10 @@ class AlarmPlugin(plugin.Plugin):
     def audio_path(self):
         file_uri = self.config.get(SECTION_NAME, OPTION_NAME)
         if file_uri is None:
-            file_uri = self.config.media_uri("alarm.ogg")
+            #file_uri = self.config.media_uri("alarm.ogg")
+            # fixme
+            file_uri = "data/media/alarm.ogg"
+
         return file_uri
 
     def settings_window(self, toplevel):

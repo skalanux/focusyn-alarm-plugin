@@ -7,10 +7,10 @@ import pytest
 from gi.repository import Gst, Gtk
 from wiring import Graph
 
-from tomate.pomodoro import Bus, Config, Events
-from tomate.ui.testing import Q, run_loop_for
+from focusyn.pomodoro import Bus, Config, Events
+from focusyn.ui.testing import Q, run_loop_for
 
-CUSTOM_ALARM = f'file://{join(dirname(__file__), "data", "tomate", "media", "custom.ogg")}'
+CUSTOM_ALARM = f'file://{join(dirname(__file__), "data", "focusyn", "media", "custom.ogg")}'
 SECTION_NAME = "alarm_plugin"
 OPTION_NAME = "file_uri"
 
@@ -33,7 +33,7 @@ def bus() -> Bus:
 @pytest.fixture
 def config(bus, tmpdir) -> Config:
     cfg = Config(bus)
-    tmp_path = tmpdir.mkdir("tomate").join("tomate.config")
+    tmp_path = tmpdir.mkdir("focusyn").join("focusyn.config")
     cfg.config_path = lambda: tmp_path.strpath
     return cfg
 
@@ -48,8 +48,8 @@ def graph() -> Graph:
 @pytest.fixture
 def plugin(bus, config, graph):
     graph.providers.clear()
-    graph.register_instance("tomate.config", config)
-    graph.register_instance("tomate.bus", bus)
+    graph.register_instance("focusyn.config", config)
+    graph.register_instance("focusyn.bus", bus)
 
     import alarm_plugin
 

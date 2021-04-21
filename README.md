@@ -1,18 +1,15 @@
-Tomate Alarm Plugin
-===================
+Focusyn Alarm Plugin
+====================
+(This is a fork from a plugin from focusyn-gtk)
+https://github.com/eliostvs/focusyn-alarm-plugin
 
-Tomate is a timer for the Pomodoro Technique.
-This plugin plays a alarm when the timer ends.
+Focusyn is a timer for the Pomodoro Technique.
+This plugin shows OSD notifications when the timer starts and stops.
 
 Installation
 ------------
 
-Go to [this page](https://github.com/eliostvs/tomate-gtk) for instructions.
-
-Bugs and Suggestions
---------------------
-
-Bugs and suggestions should be reported [here](https://github.com/eliostvs/tomate-alarm-plugin/issues).
+WIP
 
 License
 -------
@@ -28,11 +25,3 @@ PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
 with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-Audio License
--------------
-
-File downloaded from http://www.freesound.org/people/kwahmah_02/sounds/250629/
-created by kwahmah_02 an converted to ogg format.
-http://creativecommons.org/licenses/by/3.0/legalcode.
