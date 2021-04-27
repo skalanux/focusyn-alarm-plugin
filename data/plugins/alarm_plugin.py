@@ -65,7 +65,7 @@ class AlarmPlugin(plugin.Plugin):
         if file_uri is None:
             #file_uri = self.config.media_uri("alarm.ogg")
             # fixme
-            file_uri = "data/media/alarm.ogg"
+            file_uri = "file:///home/ska/Proyectos/focusyn/data/media/alarm.ogg"
 
         return file_uri
 
